@@ -9,7 +9,7 @@ However, logging from any map function is hard because it runs in separate machi
 Basically, Spark is distributed computing framework but `logging` module is single machine/process library.
 
 ## Solution
-Solution for this problem are two steps:
+Solution for this problem is two steps process:
 
 * Use remote log management service (can be cloud, Loggly in this example)
 * Configure `logging` module in both master node and worker nodes using same configuration
