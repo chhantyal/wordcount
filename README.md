@@ -19,3 +19,7 @@ Solution for this problem is two steps process:
 * `git clone git@github.com:chhantyal/wordcount.git && cd wordcount`
 * `pip install -r requirements.txt`
 * `spark-submit --py-files loggly_conf.py  wordcount.py -i samples/input.txt -k [LOGGLY_CUSTOMER_KEY]`
+
+## Loggly
+
+![Logs in Loggly](samples/loggly.png?raw=true "PySpark logs in Loggly")
