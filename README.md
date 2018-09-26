@@ -22,4 +22,6 @@ Solution for this problem is two steps process:
 
 ## Loggly
 
+Logs in Loggly UI
+
 ![Logs in Loggly](samples/loggly.png?raw=true "PySpark logs in Loggly")
