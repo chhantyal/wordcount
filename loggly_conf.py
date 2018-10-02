@@ -5,30 +5,30 @@ import logging.config
 def get_configured_logger(loggly_key):
 
     logging_config = {
-        u'version': 1,
-        u'handlers': {
-            u'loggly': {
-                u'class': u'loggly.handlers.HTTPSHandler',
-                u'formatter': u'basic',
-                u'level': u'INFO',
-                u'url': u'https://logs-01.loggly.com/inputs/{}/tag/python'.format(loggly_key)
+        'version': 1,
+        'handlers': {
+            'loggly': {
+                'class': 'loggly.handlers.HTTPSHandler',
+                'formatter': 'basic',
+                'level': 'INFO',
+                'url': 'https://logs-01.loggly.com/inputs/{}/tag/python'.format(loggly_key)
             },
-            u'console': {
-                u'class': u'logging.StreamHandler',
-                u'level': u'INFO',
-                u'formatter': u'basic',
-                u'stream': u'ext://sys.stdout',
+            'console': {
+                'class': 'logging.StreamHandler',
+                'level': 'INFO',
+                'formatter': 'basic',
+                'stream': 'ext://sys.stdout',
             }
         },
-        u'formatters': {
-            u'basic': {
-                u'format': u'%(asctime)s | %(name)15s:%(lineno)3s:%(funcName)15s | %(levelname)7s | %(message)s'
+        'formatters': {
+            'basic': {
+                'format': '%(asctime)s | %(name)15s:%(lineno)3s:%(funcName)15s | %(levelname)7s | %(message)s'
             }
         },
-        u'loggers': {
-            u'root': {
-                u'level': u'INFO',
-                u'handlers': [u'console', u'loggly']
+        'loggers': {
+            'root': {
+                'level': 'INFO',
+                'handlers': ['console', 'loggly']
             }
         }
     }
